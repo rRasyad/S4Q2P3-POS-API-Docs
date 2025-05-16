@@ -1,0 +1,15 @@
+meta {
+  name: get file
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_alt}}/storage/pictures/:filename
+  body: none
+  auth: inherit
+}
+
+params:path {
+  filename: CQMhW4LpH5Illpw38PQIU8FAcBgXNGnvmS2MGlYP.png
+}

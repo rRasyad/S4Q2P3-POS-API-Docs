@@ -1,0 +1,32 @@
+meta {
+  name: update item
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/items/:id
+  body: multipartForm
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:multipart-form {
+  supplier_id: 3
+  category_id: 1
+  name: as
+  company_name: asfafa
+  buy_price: 122121212
+  sell_price: 12121212
+  description: asnkdvnajndv
+  picture: @file(/home/rrasyad/Downloads/Background Sosialisasi Magang (2).png)
+  point: 1212
+  ~custom_tax: 121212
+}

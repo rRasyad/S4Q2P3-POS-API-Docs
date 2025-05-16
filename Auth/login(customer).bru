@@ -1,0 +1,17 @@
+meta {
+  name: login(customer)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/login
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  email: ca@e.x
+  password: admin12345
+  is_manager: 0
+}

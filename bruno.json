@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "S4Q2P3-POS",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

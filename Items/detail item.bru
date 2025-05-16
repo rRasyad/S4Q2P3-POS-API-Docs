@@ -1,0 +1,19 @@
+meta {
+  name: detail item
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/items/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
