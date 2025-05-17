@@ -1,13 +1,17 @@
 meta {
-  name: item list
+  name: delete 
   type: http
-  seq: 1
+  seq: 5
 }
 
-get {
-  url: {{base_url}}/items
+delete {
+  url: {{base_url}}/items/:id
   body: none
   auth: bearer
+}
+
+params:path {
+  id: 1
 }
 
 auth:bearer {

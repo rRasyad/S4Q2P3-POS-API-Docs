@@ -1,0 +1,22 @@
+meta {
+  name: Index
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/users?limit=20&user_sort_by=id&user_order=desc&search=@e.x
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 20
+  user_sort_by: id
+  user_order: desc
+  search: @e.x
+}
+
+auth:bearer {
+  token: {{tokenc}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: logout
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base_url}}/logout
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:form-urlencoded {
+  email: m@e.x
+  password: admin12345
+  is_manager: 1
+}

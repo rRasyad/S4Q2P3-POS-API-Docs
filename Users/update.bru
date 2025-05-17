@@ -1,0 +1,48 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/users/:id
+  body: multipartForm
+  auth: bearer
+}
+
+params:path {
+  id: 26
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:form-urlencoded {
+  : 
+  : 
+  : 
+  : 
+  : 
+}
+
+body:multipart-form {
+  role: 2
+  first_name: asasasasfadfsvda
+  last_name: asasas1231253
+  email: awaokawok@example.com
+  phone: 1212413435346
+  gender: 1
+  ~password: admin12345
+  ~address: 
+  ~company_name: 
+}
+
+docs {
+  # IMPORTANT
+  Explanation for Role
+  - 0 = manager
+  - 1 = cashier
+  - 2 = supplier
+  - 3 = customer
+}

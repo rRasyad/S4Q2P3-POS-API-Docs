@@ -1,10 +1,10 @@
 meta {
-  name: update item
+  name: update
   type: http
   seq: 4
 }
 
-post {
+put {
   url: {{base_url}}/items/:id
   body: multipartForm
   auth: bearer
