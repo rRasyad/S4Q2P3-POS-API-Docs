@@ -1,0 +1,41 @@
+meta {
+  name: detail
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/payments/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:form-urlencoded {
+  : 
+  : 
+  : 
+  : 
+  : 
+}
+
+body:multipart-form {
+  name: asnadnvjkank
+  admin_fee: 12312123.14
+}
+
+docs {
+  # IMPORTANT
+  Explanation for Role
+  - 0 = manager
+  - 1 = cashier
+  - 2 = supplier
+  - 3 = customer
+}

@@ -1,20 +1,23 @@
 meta {
-  name: index
+  name: detail
   type: http
-  seq: 1
+  seq: 4
 }
 
 get {
-  url: {{base_url}}/items?limit=20&column=id&direction=desc&search=qui
+  url: {{base_url}}/categories/:id?column=id&limit=20&direction=desc
   body: none
   auth: bearer
 }
 
 params:query {
-  limit: 20
   column: id
+  limit: 20
   direction: desc
-  search: qui
+}
+
+params:path {
+  id: 20
 }
 
 auth:bearer {
