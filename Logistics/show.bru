@@ -1,0 +1,26 @@
+meta {
+  name: show
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/logistics/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: Repudiandae
+  ~limit: 20
+  ~column: id
+  ~direction: desc
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}

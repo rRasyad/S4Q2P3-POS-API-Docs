@@ -1,0 +1,36 @@
+meta {
+  name: create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/categories
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:form-urlencoded {
+  : 
+  : 
+  : 
+  : 
+  : 
+}
+
+body:multipart-form {
+  name: asnadnvjkank
+}
+
+docs {
+  # IMPORTANT
+  Explanation for Role
+  - 0 = manager
+  - 1 = cashier
+  - 2 = supplier
+  - 3 = customer
+}

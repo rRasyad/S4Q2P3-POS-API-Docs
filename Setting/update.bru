@@ -1,0 +1,36 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/categories/:id
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:form-urlencoded {
+  name: asasasasasas
+}
+
+body:multipart-form {
+  name: 12414235
+}
+
+docs {
+  # IMPORTANT
+  Explanation for Role
+  - 0 = manager
+  - 1 = cashier
+  - 2 = supplier
+  - 3 = customer
+}

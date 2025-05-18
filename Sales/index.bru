@@ -1,0 +1,22 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/sales
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: 0
+  ~limit: 20
+  ~column: id
+  ~direction: desc
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}

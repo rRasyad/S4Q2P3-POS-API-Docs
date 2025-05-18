@@ -1,0 +1,19 @@
+meta {
+  name: delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/logistics/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 13
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}

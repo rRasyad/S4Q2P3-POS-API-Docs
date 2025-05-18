@@ -1,0 +1,22 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/categories?limit=20&column=id&direction=desc&search=qui
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 20
+  column: id
+  direction: desc
+  search: qui
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}

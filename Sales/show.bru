@@ -1,0 +1,26 @@
+meta {
+  name: show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/sales/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: Brakus, Klocko and Romaguera
+  ~limit: 20
+  ~column: id
+  ~direction: desc
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
