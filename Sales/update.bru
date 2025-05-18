@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/sales/:id
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:path {
+  id: 105
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:form-urlencoded {
+  paid: 5000
+}
+
+docs {
+  # Important
+  Explanation for Paid
+  - if paid = null, it will set status to canceled
+  - if paid = (decimal), it will accepted
+}

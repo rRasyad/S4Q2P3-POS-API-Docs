@@ -1,0 +1,42 @@
+meta {
+  name: create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/sales
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}
+
+body:json {
+  {
+    "cashier_id": 1,
+    "customer_id": 1,
+    "payment_id": 1,
+    "point_used": 100,
+    "sale_details": [
+      {
+        "item_id": 1,
+        "quantity": 20
+      },
+      {
+        "item_id": 2,
+        "quantity": 30
+      }
+    ]
+  }
+}
+
+docs {
+  # Important
+  Explanation of Status
+  - 0 = pending
+  - 1 = paid
+  - 2 = canceled
+}
