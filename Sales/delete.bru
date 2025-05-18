@@ -1,0 +1,19 @@
+meta {
+  name: delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/sales/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 106
+}
+
+auth:bearer {
+  token: {{tokenm}}
+}

@@ -5,20 +5,20 @@ meta {
 }
 
 get {
-  url: {{base_url}}/users?limit=20&column=id&direction=desc&search=@e.x
+  url: {{base_url}}/users
   body: none
   auth: bearer
 }
 
 params:query {
-  limit: 20
-  column: id
-  direction: desc
-  search: @e.x
+  ~limit: 20
+  ~column: id
+  ~direction: desc
+  ~search: @e.x
 }
 
 auth:bearer {
-  token: {{tokenc}}
+  token: {{tokenm}}
 }
 
 docs {
